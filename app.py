@@ -14,8 +14,8 @@ conn = sqlite3.connect('db/app.db')
 
 # define db queries to separate data into scanners
 queries  = {
-    "PBT": 'SELECT * FROM DQA WHERE ManufacturersModelName = "Ingenia_Ambition_X"', 
-    "MR2": 'SELECT * FROM DQA WHERE InstitutionName = "UCH_Podium_MR2"'
+    "MR2": 'SELECT * FROM DQA WHERE StationName = "MRC25326"',
+    "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
 }
 
 
@@ -102,12 +102,14 @@ app.layout = html.Div(
         ),
         
         html.P(
-            children=[" Select/unselect specific rf-coils by clicking on their legend.", html.Br()],
+            children=[" Select/Unselect specific rf-coils by clicking on their legend.", html.Br()],
             style={"color": 'rgb(97, 197, 97)'}
             # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
         ),
 
 
+
+            
         dcc.Graph(
             id="chart1",
             # config={"displayModeBar": False},
