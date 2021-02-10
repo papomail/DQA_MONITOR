@@ -97,12 +97,12 @@ app.layout = html.Div(
         ),
 
         html.P(
-            children=["These charts show the Normalised Signal to Noise Ratio (NSNR) of rf-coils, measured regularly at MRI scanners across UCLH."],
+            children=["The charts show the normalised signal to noise ratios (NSNR) of different rf-coils, obtained from QC tests performed regularly across the MRI scanners in the Trust."],
             className="header-description"
         ),
         
         html.P(
-            children=[" Inspect the chart interactively using the menu on the graphs." ," Select/unselect specific rf-coils by clicking on their legend.", html.Br()],
+            children=[" Select/unselect specific rf-coils by clicking on their legend.", html.Br()],
             style={"color": 'rgb(97, 197, 97)'}
             # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
         ),
