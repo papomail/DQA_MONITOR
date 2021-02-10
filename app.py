@@ -9,7 +9,8 @@ import sqlite3
 
 
 # create db connection 
-conn = sqlite3.connect(Path.cwd().parent/'db'/'app.db')
+# conn = sqlite3.connect(Path.cwd()/'db'/'app.db')
+conn = sqlite3.connect('db/app.db')
 
 # define db queries to separate data into scanners
 queries  = {
