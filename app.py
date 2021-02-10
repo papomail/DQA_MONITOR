@@ -110,7 +110,7 @@ app.layout = html.Div(
 
         dcc.Graph(
             id="chart1",
-            config={"displayModeBar": False},
+            # config={"displayModeBar": False},
             figure = charts[0],
             className= "card",
             style={'display': 'inline-block'},
