@@ -26,20 +26,30 @@ for key, value in queries.items():
     data = pd.read_sql(value,conn)
     data['NSNR'] = data['NSNR'].astype(float).round(0)
     data['NSNR_std'] = data['NSNR_std'].astype(float).round(0)
-    if data['ReceiveCoilName'][0]:
-        data['Coil'] = data['ReceiveCoilName']
-    else:
-        data['Coil'] = data['Coil'].apply(lambda x: x[0:x.find('_DQA')])
-        
-
+    print(f'without corrections{key} \n{data}\n')
 
     data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'Coil'] = data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'ProtocolName'] # change names for MR4
-    data.loc[data.Date  == '2021-02-11 19:00:08.150000', 'Coil'] = 'SPINE_DQA' #correct name NV16 to SPINE 
 
+    data['ReceiveCoilName'] = data['ReceiveCoilName'].replace(['0',0,'None',None],'')
+
+
+    print(f'during corrections{key} \n{data}\n')
+
+    if data['ReceiveCoilName'].values[0]:
+        print('ReceiveCoilName exists')
+        data['Coil'] = data['ReceiveCoilName']
+    else:
+        print('NO ReceiveCoilName')
+        data['Coil'] = data['Coil'].apply(lambda x: x[0:x.find('_DQA')])
+
+
+    
+    data.loc[data.Date  == '2021-02-11 19:00:08.150000', 'Coil'] = 'SPINE' #correct name NV16 to SPINE 
+    
+    print(f'after corrections {key} \n{data}\n')
 
     data.sort_values("Date", inplace=True)
     scanners.update({key:data})
-    print(f'\n{data}\n')
 
 
 # create chart to be shown
