@@ -1,0 +1,10 @@
+,Date,Coil,NSNR,NSNR_std,Manufacturer,ManufacturersModelName,InstitutionName,InstitutionalDepartmentName,InstitutionAddress,StationName,ProtocolName,CoilString
+0,2020-08-27 16:41:45.770,Ant_Post_DQA_2dynamics_20200827163509_20,567.0,171.756310573269,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,Ant_Post_DQA_2dynamics,MULTI_COIL
+1,2020-08-27 14:42:52.190,HN_Head_DQA_2dynamics_20200827143512_20,2172.0,115.84122759102246,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,HN_Head_DQA_2dynamics,MULTI_COIL
+2,2020-08-27 15:01:44.500,HN_Head_DQA_2dynamics_20200827145137_20,2083.0,118.82155909605994,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,HN_Head_DQA_2dynamics,MULTI_COIL
+3,2020-08-27 15:06:10.290,HN_Neck_DQA_2dynamics_20200827145137_30,1514.0,160.0335541220759,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,HN_Neck_DQA_2dynamics,MULTI_COIL
+4,2020-08-27 15:09:58.510,HN_Neck_DQA_2dynamics_20200827145137_40,1487.0,171.06379249185088,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,HN_Neck_DQA_2dynamics,MULTI_COIL
+5,2020-08-27 15:31:45.630,Flex_L_coil_DQA_2dynamics_20200827152725_20,1637.0,84.06591457759872,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,Flex_L_coil_DQA_2dynamics,MULTI_COIL
+6,2020-08-27 15:46:53.410,Flex_M_coil_DQA_2dynamics_20200827153636_20,1563.0,144.48437506661801,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,Flex_M_coil_DQA_2dynamics,MULTI_COIL
+7,2020-08-27 16:18:01.830,Flex_S_coil_DQA_2dynamics_200ml_phantom_20200827155146_60,1812.0,203.62002995405786,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,Flex_S_coil_DQA_2dynamics_200ml_phantom,MULTI_COIL
+8,2020-08-27 16:03:45.930,Flex_S_coil_DQA_2dynamics_500ml_phantom_20200827155146_20,789.0,81.97350857091867,Philips,Ingenia_Ambition_X,UCLH,MRI,25_Grafton_Way,PHILIPS-499QHGT,Flex_S_coil_DQA_2dynamics_500ml_phantom,MULTI_COIL

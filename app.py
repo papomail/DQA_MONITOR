@@ -15,6 +15,7 @@ conn = sqlite3.connect('db/app.db')
 # define db queries to separate data into scanners
 queries  = {
     "MR2": 'SELECT * FROM DQA WHERE StationName = "MRC25326"',
+    "MR4": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-0DIKEI3"',
     "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
 }
 
@@ -29,6 +30,13 @@ for key, value in queries.items():
         data['Coil'] = data['ReceiveCoilName']
     else:
         data['Coil'] = data['Coil'].apply(lambda x: x[0:x.find('_DQA')])
+        
+
+
+    data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'Coil'] = data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'ProtocolName'] # change names for MR4
+    data.loc[data.Date  == '2021-02-11 19:00:08.150000', 'Coil'] = 'SPINE_DQA' #correct name NV16 to SPINE 
+
+
     data.sort_values("Date", inplace=True)
     scanners.update({key:data})
     print(f'\n{data}\n')
@@ -121,6 +129,12 @@ app.layout = html.Div(
 
          dcc.Graph(
             figure = charts[1],
+            style={'display': 'inline-block'},
+            # config={"displayModeBar": False},
+            className= "card",
+
+        ), dcc.Graph(
+            figure = charts[2],
             style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
