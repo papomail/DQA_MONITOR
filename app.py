@@ -16,7 +16,9 @@ conn = sqlite3.connect('db/app.db')
 queries  = {
     "MR2": 'SELECT * FROM DQA WHERE StationName = "MRC25326"',
     "MR4": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-0DIKEI3"',
+    "MR6": 'SELECT * FROM DQA WHERE StationName = "AWP176065"',
     "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
+
 }
 
 
@@ -26,14 +28,14 @@ for key, value in queries.items():
     data = pd.read_sql(value,conn)
     data['NSNR'] = data['NSNR'].astype(float).round(0)
     data['NSNR_std'] = data['NSNR_std'].astype(float).round(0)
-    print(f'without corrections{key} \n{data}\n')
+    # print(f'without corrections{key} \n{data}\n')
 
     data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'Coil'] = data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'ProtocolName'] # change names for MR4
 
     data['ReceiveCoilName'] = data['ReceiveCoilName'].replace(['0',0,'None',None],'')
 
 
-    print(f'during corrections{key} \n{data}\n')
+    # print(f'during corrections{key} \n{data}\n')
 
     if data['ReceiveCoilName'].values[0]:
         print('ReceiveCoilName exists')
@@ -65,7 +67,8 @@ for scanner in scanners.items():
         size = 'NSNR_std',
         color = "Coil",
         hover_data={'NSNR_std':False},
-        title = f"{scanner[1].InstitutionName[0].replace('_',' ')}: {scanner[1].ManufacturersModelName[0].replace('_',' ')}",
+        # title = f"{scanner[1].InstitutionName[0].replace('_',' ')}: {scanner[1].ManufacturersModelName[0].replace('_',' ')}",
+        title = f"{scanner[0]}: {scanner[1].ManufacturersModelName[0].replace('_',' ')}",
         template = 'simple_white',
 
         )
@@ -137,14 +140,22 @@ app.layout = html.Div(
             # config={"displayModeBar": False}
         ),
 
-         dcc.Graph(
+        dcc.Graph(
             figure = charts[1],
             style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
 
-        ), dcc.Graph(
+        ), 
+        dcc.Graph(
             figure = charts[2],
+            style={'display': 'inline-block'},
+            # config={"displayModeBar": False},
+            className= "card",
+        ),
+
+         dcc.Graph(
+            figure = charts[3],
             style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
