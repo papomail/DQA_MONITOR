@@ -26,8 +26,10 @@ queries  = {
 scanners = {}
 for key, value in queries.items():    
     data = pd.read_sql(value,conn)
-    data['NSNR'] = data['NSNR'].astype(float).round(0)
-    data['NSNR_std'] = data['NSNR_std'].astype(float).round(0)
+    data['NSNR'] = data['NSNR'].round(0).astype(int)
+    data['NSNR_std'] = data['NSNR_std'].round(0).astype(int)
+    data['noise_std'] = data['noise_std'].astype(float).round(1)
+
     # print(f'without corrections{key} \n{data}\n')
 
     data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'Coil'] = data.loc[data.StationName  == 'PHILIPS-0DIKEI3', 'ProtocolName'] # change names for MR4
@@ -64,14 +66,19 @@ for scanner in scanners.items():
         x="Date",
         y = 'NSNR',
         error_y = 'NSNR_std',
-        size = 'NSNR_std',
+        # size = scanner[1]['NSNR_std']/scanner[1]['NSNR'],
+        size= 'noise_std',
         color = "Coil",
-        hover_data={'NSNR_std':False},
+        hover_name = "Coil",
+        hover_data={'NSNR_std':False,'Coil':False,},
+        
+
         # title = f"{scanner[1].InstitutionName[0].replace('_',' ')}: {scanner[1].ManufacturersModelName[0].replace('_',' ')}",
         title = f"{scanner[0]}: {scanner[1].ManufacturersModelName[0].replace('_',' ')}",
         template = 'simple_white',
 
         )
+
     chart.update_traces(
         mode='lines+markers',
         marker=dict(
@@ -83,6 +90,12 @@ for scanner in scanners.items():
             #     width=12
             ),
         line=dict(dash='dot'), 
+
+        # hovertemplate=
+        # "<b>{marker.color}</b><br><br>" +
+        # "NSNR: %{y}<br>" +
+        # "%{x}<br>" +
+        # "<extra></extra>",
         )
     # )
 
