@@ -136,6 +136,11 @@ app.layout = html.Div(
         ),
         
         html.P(
+            children=[" El diametro de los putos circulos, que no esferas, son proporcionales a lo mal que has hecho la dichosa medida. Joder ya. Okay Igor?!", html.Br()],
+            style={"color": 'rgb(97, 97, 97)'}
+            # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
+        ),
+        html.P(
             children=[" Select/Unselect specific rf-coils by clicking on their legend.", html.Br()],
             style={"color": 'rgb(97, 197, 97)'}
             # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
