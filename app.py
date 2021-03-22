@@ -28,7 +28,8 @@ for key, value in queries.items():
     data = pd.read_sql(value,conn)
     data['NSNR'] = data['NSNR'].round(0).astype(int)
     data['NSNR_std'] = data['NSNR_std'].round(0).astype(int)
-    data['noise_std'] = data['noise_std'].astype(float).round(1)
+    data['Noise std'] = (data['noise_std']).astype(float).round(1)
+    # data['circle'] = (1000*data['noise_std']/data['NSNR']).astype(float).round(1)
 
     # print(f'without corrections{key} \n{data}\n')
 
@@ -63,11 +64,12 @@ for scanner in scanners.items():
 
     chart = px.scatter( 
         scanner[1], 
-        x="Date",
+        x ="Date",
         y = 'NSNR',
         error_y = 'NSNR_std',
         # size = scanner[1]['NSNR_std']/scanner[1]['NSNR'],
-        size= 'noise_std',
+        size=  'Noise std',
+        # size = 'circle',
         color = "Coil",
         hover_name = "Coil",
         hover_data={'NSNR_std':False,'Coil':False,},
@@ -131,7 +133,7 @@ app.layout = html.Div(
         ),
 
         html.P(
-            children=["The charts show the normalised signal to noise ratios (NSNR) of different rf-coils, obtained from QC tests performed regularly across the MRI scanners in the Trust."],
+            children=["The graphs show the normalised signal to noise ratios (NSNR) of different rf-coils, obtained from QC tests performed regularly across the MRI scanners in the Trust."],
             className="header-description"
         ),
 
