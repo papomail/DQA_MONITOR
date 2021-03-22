@@ -15,9 +15,9 @@ conn = sqlite3.connect('db/app.db')
 # define db queries to separate data into scanners
 queries  = {
     "MR2": 'SELECT * FROM DQA WHERE StationName = "MRC25326"',
+    "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
     "MR4": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-0DIKEI3"',
     "MR6": 'SELECT * FROM DQA WHERE StationName = "AWP176065"',
-    "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
 
 }
 
@@ -134,14 +134,12 @@ app.layout = html.Div(
             children=["The charts show the normalised signal to noise ratios (NSNR) of different rf-coils, obtained from QC tests performed regularly across the MRI scanners in the Trust."],
             className="header-description"
         ),
-        
+
+    
+      
+
         html.P(
-            children=[" El diametro de los putos circulos, que no esferas, son proporcionales a lo mal que has hecho la dichosa medida. Joder ya. Okay Igor?!", html.Br()],
-            style={"color": 'rgb(97, 97, 97)'}
-            # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
-        ),
-        html.P(
-            children=[" Select/Unselect specific rf-coils by clicking on their legend.", html.Br()],
+            children=[" You can move and zoom around the desired dates and hide unwanted coils by clicking on their legend.", html.Br()],
             style={"color": 'rgb(97, 197, 97)'}
             # "Rather that the actual NSNR value, we look for any anomaly in the trend of each rf-coil's "
         ),
@@ -154,27 +152,27 @@ app.layout = html.Div(
             # config={"displayModeBar": False},
             figure = charts[0],
             className= "card",
-            style={'display': 'inline-block'},
+            # style={'display': 'inline-block'},
             # config={"displayModeBar": False}
         ),
 
         dcc.Graph(
             figure = charts[1],
-            style={'display': 'inline-block'},
+            # style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
 
         ), 
         dcc.Graph(
             figure = charts[2],
-            style={'display': 'inline-block'},
+            # style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
         ),
 
          dcc.Graph(
             figure = charts[3],
-            style={'display': 'inline-block'},
+            # style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
         ),
@@ -185,6 +183,40 @@ app.layout = html.Div(
         #     style={'display': 'inline-block'},
         #     # config={"displayModeBar": False}
         # ),
+
+
+         html.P(
+            children=[dcc.Markdown('''
+            ### Reading the graphs
+            * The size of the circles is proportional to the standard deviation of the *noise image*.  
+            A large circle indicates a sub-optimal image substraction, which can be due to **excessive movement** of the liquid inside the phantom.
+            
+            * The length of the whiskers represent the standar deviation of the SNR measured.  
+            Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).
+            
+            *In order to evaluate the performance of rf-coils over time, it is **critical** that every coil is always tested using the same methodology (**same protocol, same FOV, same phantom position, etc**).*
+            '''
+            ),
+
+        html.Span(
+            children = dcc.Markdown('''
+            * On an ideal test, a **well performing** coil should appear as a *flat band* on the graph, with constant NSNR and standar deviation over time. 
+            '''
+            ),
+            style={"color": 'rgb(97, 197, 97)'}),
+
+        html.Span(
+            children = dcc.Markdown('''
+            * On an ideal test, an **under-performing** coil should appear as a *descending slope*, (if the SNR is gradually worsening) or as a *step reduction* in the event of a sudden loss in SNR.
+            '''
+            ),
+            style={"color": 'rgb(197, 50, 50)'})   
+        
+        
+        ],
+            
+            className="explanation"
+        ),
         
     ],
     className="wrapper",    

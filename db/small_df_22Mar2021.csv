@@ -1,0 +1,2 @@
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName,ReceiveCoilName,ReceiveCoilActiveElements
+0,2021-03-22 08:10:39.850,HN_DQA_20210322080901_00,1164.0,240.5638438649842,15.35764706749012,Siemens,Avanto_fit,Euston_Road_265-257_London_District_GB_NW1_2BW,MRC25326,HN_DQA,HE1-4;NE1_2,UCLH,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
