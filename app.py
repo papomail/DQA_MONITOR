@@ -202,14 +202,14 @@ app.layout = html.Div(
 
         html.Span(
             children = dcc.Markdown('''
-            * On an ideal test, a **well performing** coil should appear as a *flat band* on the graph, with constant NSNR and standar deviation over time. 
+            * In an ideal test, a **well performing** coil should appear as a *flat band* on the graph, with constant NSNR and standar deviation over time. 
             '''
             ),
             style={"color": 'rgb(97, 197, 97)'}),
 
         html.Span(
             children = dcc.Markdown('''
-            * On an ideal test, an **under-performing** coil should appear as a *descending slope*, (if the SNR is gradually worsening) or as a *step reduction* in the event of a sudden loss in SNR.
+            * In an ideal test, an **under-performing** coil should appear as a *descending slope*, (if the SNR is gradually worsening) or as a *step reduction* in the event of a sudden loss in SNR.
             '''
             ),
             style={"color": 'rgb(197, 50, 50)'})   
