@@ -1,6 +1,23 @@
 # DQA_MONITOR
 Is a simple Dash application that broadcasts the [daily QA test](https://github.com/papomail/Daily_QA_UCLH) results, so they can be inspect from the confort of your browser.   
 
+DQA_MONITOR is currently live at https://uclh.herokuapp.com/ 
+
+
 ![](/media/DQA_WEB_APP_1.png?raw=true)
 
-<p class="explanation"><div><h3>Reading the graphs</h3><ul><li><p>The size of the circles is proportional to the standard deviation of the <em>noise image</em>.<br>A large circle indicates a sub-optimal image substraction, which can be due to <strong>excessive movement</strong> of the liquid inside the phantom.</p></li><li><p>The length of the whiskers represent the standar deviation of the SNR measured.<br>Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).</p></li></ul><p><em>In order to evaluate the performance of rf-coils over time, it is <strong>critical</strong> that every coil is always tested using the same methodology (<strong>same protocol, same FOV, same phantom position, etc</strong>).</em></p></div><span style="color: rgb(97, 197, 97);"><div><ul><li>In an ideal test, a <strong>well performing</strong> coil should appear as a <em>flat band</em> on the graph, with constant NSNR and standar deviation over time. </li></ul></div></span><span style="color: rgb(197, 50, 50);"><div><ul><li>In an ideal test, an <strong>under-performing</strong> coil should appear as a <em>descending slope</em>, (if the SNR is gradually worsening) or as a <em>step reduction</em> in the event of a sudden loss in SNR.</li></ul></div></span></p>
+
+
+
+### Reading the graphs
+
+* The size of the circles is proportional to the standard deviation of the _noise image_.  
+A large circle indicates a sub-optimal image substraction, which can be due to **excessive movement** of the liquid inside the phantom.
+
+* The length of the whiskers represent the standar deviation of the SNR measured. Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).
+
+*In order to evaluate the performance of rf-coils over time, it is **critical** that every coil is always tested using the same methodology (**same protocol, same FOV, same phantom position, etc**).*
+
+
+* In an ideal test, a **well performing** coil should appear as a _flat band_ on the graph, with constant NSNR and standar deviation over time.
+* In an ideal test, an **under-performing** coil should appear as a _descending slope_, (if the SNR is gradually worsening) or as a _step reduction_ in the event of a sudden loss in SNR.
