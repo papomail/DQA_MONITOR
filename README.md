@@ -3,9 +3,7 @@ Is a simple Dash application that broadcasts the [daily QA test](https://github.
 
 
 
-![](/media/DQA_WEB_APP_1.png?raw=true)
-
-DQA_MONITOR is currently live at https://uclh.herokuapp.com/ 
+![](/media/DQA_WEB_APP_1.png?raw=true)DQA_MONITOR is currently live at https://uclh.herokuapp.com/   
 
 
 
