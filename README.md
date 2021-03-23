@@ -1,11 +1,11 @@
 # DQA_MONITOR
 Is a simple Dash application that broadcasts the [daily QA test](https://github.com/papomail/Daily_QA_UCLH) results, so they can be inspect from the confort of your browser.   
 
-DQA_MONITOR is currently live at https://uclh.herokuapp.com/ 
 
 
 ![](/media/DQA_WEB_APP_1.png?raw=true)
 
+DQA_MONITOR is currently live at https://uclh.herokuapp.com/ 
 
 
 
