@@ -1,0 +1,5 @@
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName,ReceiveCoilName,ReceiveCoilActiveElements
+0,2021-03-24 09:36:27.890000,Ant_Post_Lower_DQA_Lower_2dynamics_Lower_20210324092352_40200,562.0,146.45323388691926,6.782055031123899,Philips,Ingenia_Ambition_X,25_Grafton_Way,PHILIPS-499QHGT,Ant_Post_DQA_2dynamics_Lower,MULTI_COIL,UCLH,MRI,0,0
+1,2021-03-24 09:42:23.850000,Ant_Post_Upper_DQA_Upper_2dynamics_Upper_20210324092352_60200,575.0,149.6502229677049,6.551762240902653,Philips,Ingenia_Ambition_X,25_Grafton_Way,PHILIPS-499QHGT,Ant_Post_DQA_2dynamics_Upper,MULTI_COIL,UCLH,MRI,0,0
+2,2021-03-23 08:03:53.347500,HN_DQA_20210323080206_00,1351.0,307.45398725824015,11.901035228021541,Siemens,Avanto_fit,Euston_Road_265-257_London_District_GB_NW1_2BW,MRC25326,HN_DQA,HE1-4;NE1_2,UCH_Podium_MR2,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
+3,2021-03-24 11:47:54.380000,HN_DQA_20210324114533_00,1395.0,264.513358026518,13.321645473769358,Siemens,Avanto_fit,Euston_Road_265-257_London_District_GB_NW1_2BW,MRC25326,HN_DQA,HE1-4;NE1_2,UCLH,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
