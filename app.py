@@ -29,6 +29,8 @@ for key, value in queries.items():
     data['NSNR'] = data['NSNR'].round(0).astype(int)
     data['NSNR_std'] = data['NSNR_std'].round(0).astype(int)
     data['Noise std'] = (data['noise_std']).astype(float).round(1)
+    data['Coil'] = data['Coil'].apply(lambda x: x.replace('WIP_',''))
+    # print(f"printing data['Coil']: {data['Coil']}")
     # data['circle'] = (1000*data['noise_std']/data['NSNR']).astype(float).round(1)
 
     # print(f'without corrections{key} \n{data}\n')
