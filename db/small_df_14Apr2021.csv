@@ -1,0 +1,4 @@
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName
+0,2021-04-12 10:22:30.200,WIP_Flex_L_coil_DQA_2dynamics_20210412101638_20200,1118.0,56.93066842258337,14.420363697121036,Philips,Ingenia_Ambition_X,25_Grafton_Way,PHILIPS-499QHGT,WIP_Flex_L_coil_DQA_2dynamics,MULTI_COIL,UCLH,MRI
+1,2021-04-12 09:02:53.010,WIP_Flex_M_coil_DQA_2dynamics_20210412085716_20200,1082.0,72.14989099221407,14.026443219907895,Philips,Ingenia_Ambition_X,25_Grafton_Way,PHILIPS-499QHGT,WIP_Flex_M_coil_DQA_2dynamics,MULTI_COIL,UCLH,MRI
+2,2021-04-07 12:32:46.480,WIP_Flex_S_coil_DQA_2dynamics_20210407115608_20200,826.0,81.6778414156985,17.18052099620362,Philips,Ingenia_Ambition_X,25_Grafton_Way,PHILIPS-499QHGT,WIP_Flex_S_coil_DQA_2dynamics,MULTI_COIL,UCLH,MRI
