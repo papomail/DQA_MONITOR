@@ -67,8 +67,15 @@ for scanner in scanners.items():
     chart = px.scatter( 
         scanner[1], 
         x ="Date",
-        y = 'NSNR',
-        error_y = 'NSNR_std',
+        # y = 'NSNR',
+        # error_y = 'NSNR_std',
+        y = scanner[1].NSNR.rolling(1).median(),
+        error_y = scanner[1].NSNR_std.rolling(1).median(),
+        labels={
+                     "y": "NSNR",
+                     "x": "Scan datetime",
+                     "Date": "Scan datetime"
+                 },
         # size = scanner[1]['NSNR_std']/scanner[1]['NSNR'],
         size=  'Noise std',
         # size = 'circle',

@@ -1,2 +1,4 @@
-,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,InstitutionName,InstitutionalDepartmentName,ReceiveCoilName,ReceiveCoilActiveElements
-0,2021-05-11 07:54:55.362500,HN_DQA_20210511075340_00,1468.0,323.758422149198,11.094325280753274,Siemens,Avanto_fit,"Euston Road 265-257,London,District,GB,NW1 2BW",MRC25326,HN_DQA,UCLH,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName,ReceiveCoilName,ReceiveCoilActiveElements
+0,2021-05-10 09:11:43.720000,Carbon_Insert+headrest_DQA_20210510084905_60200,176.0,16.187573230557952,31.428586697145448,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Carbon_Insert+headrest_2dynamics,BODY_QUAD,UCLH,MRI,0,0
+1,2021-05-10 09:28:31.100000,No_Carbon_Insert_DQA_20210510084905_80200,181.0,13.675147897291353,30.39064822573795,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,No_Carbon_Insert_2dynamics,BODY_QUAD,UCLH,MRI,0,0
+2,2021-05-11 07:54:55.362500,HN_DQA_20210511075340_00,1468.0,323.758422149198,11.094325280753274,Siemens,Avanto_fit,"Euston Road 265-257,London,District,GB,NW1 2BW",MRC25326,HN_DQA,0,UCLH,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
