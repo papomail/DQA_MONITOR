@@ -202,7 +202,7 @@ app.layout = html.Div(
             * The size of the circles is proportional to the standard deviation of the *noise image*.  
             A large circle indicates a sub-optimal image substraction, which can be due to **excessive movement** of the liquid inside the phantom.
             
-            * The length of the whiskers represent the standar deviation of the SNR measured.  
+            * The length of the whiskers represent the standard deviation of the SNR measured.  
             Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).
             
             *In order to evaluate the performance of rf-coils over time, it is **critical** that every coil is always tested using the same methodology (**same protocol, same FOV, same phantom position, etc**).*
