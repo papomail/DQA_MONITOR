@@ -1,5 +1,5 @@
 # DQA_MONITOR
-Is a simple Dash application that broadcasts the [daily QA test](https://github.com/papomail/Daily_QA_UCLH) results, so they can be inspect from the confort of your browser.   
+Is a simple Dash application that broadcasts the [daily QA test](https://github.com/papomail/Daily_QA_UCLH) results, so they can be inspect from the comfort of your browser.   
 
 
 
