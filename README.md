@@ -10,9 +10,9 @@ Is a simple Dash application that broadcasts the [daily QA test](https://github.
 ### Reading the graphs
 
 * The size of the circles is proportional to the standard deviation of the _noise image_.  
-A large circle indicates a sub-optimal image substraction, which can be due to **excessive movement** of the liquid inside the phantom.
+A large circle indicates a sub-optimal image subtraction, which can be due to **excessive movement** of the liquid inside the phantom.
 
-* The length of the whiskers represent the standar deviation of the SNR measured. Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).
+* The length of the whiskers represent the standard deviation of the SNR measured. Long whiskers indicate a large variation in the SNR across the imaged volume, and that is okay. It is expected that each coil tested will have different SNR variation (as the coil elements can be closer or further away from the source of the signal, depending on the geometry of the test).
 
 *In order to evaluate the performance of rf-coils over time, it is **critical** that every coil is always tested using the same methodology (**same protocol, same FOV, same phantom position, etc**).*
 
