@@ -1,0 +1,8 @@
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName
+0,2022-10-06 09:12:31.330,Ant_Post_Coil_A_Lower_DQA_2dynamics_20221006085518_401_000,776.0,185.99136710003046,18.37514,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Ant_Post_Coil_A_Lower_DQA_2dynamics,MULTI COIL,UCLH,MRI
+1,2022-10-06 09:00:59.750,Ant_Post_Coil_A_Upper_DQA_2dynamics_20221006085518_201_000,715.0,166.38057709837565,21.136642,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Ant_Post_Coil_A_Upper_DQA_2dynamics,MULTI COIL,UCLH,MRI
+2,2022-10-06 09:32:32.590,Ant_Post_Coil_B_Lower_DQA_2dynamics_20221006091650_401_000,640.0,153.0397805203987,23.905523,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Ant_Post_Coil_B_Lower_DQA_2dynamics,MULTI COIL,UCLH,MRI
+3,2022-10-06 09:24:07.760,Ant_Post_Coil_B_Upper_DQA_2dynamics_20221006091650_201_000,781.0,188.70690968641438,18.981895,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Ant_Post_Coil_B_Upper_DQA_2dynamics,MULTI COIL,UCLH,MRI
+4,2022-10-05 14:20:21.980,Flex_L_coil_DQA_2dynamics_20221005141534_201_000,934.0,46.39464211712005,47.018658,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Flex_L_coil_DQA_2dynamics,MULTI COIL,UCLH,MRI
+5,2022-10-05 14:06:21.250,Flex_M_coil_DQA_2dynamics_20221005135851_201_000,1050.0,72.54871091624895,43.787235,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Flex_M_coil_DQA_2dynamics,MULTI COIL,UCLH,MRI
+6,2022-10-05 13:49:11.050,Flex_S_coil_DQA_2dynamics_20221005134647_201_000,888.0,79.04777137048153,41.048077,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Flex_S_coil_DQA_2dynamics,MULTI COIL,UCLH,MRI
