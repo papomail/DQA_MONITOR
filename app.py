@@ -18,6 +18,8 @@ queries  = {
     "PBT": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-499QHGT"', 
     "MR4": 'SELECT * FROM DQA WHERE StationName = "PHILIPS-0DIKEI3"',
     "MR6": 'SELECT * FROM DQA WHERE StationName = "AWP176065"',
+    "MR1": 'SELECT * FROM DQA WHERE StationName = "MRC25329"',
+
 
 }
 
@@ -181,14 +183,19 @@ app.layout = html.Div(
             className= "card",
         ),
 
-         dcc.Graph(
+        dcc.Graph(
             figure = charts[3],
             # style={'display': 'inline-block'},
             # config={"displayModeBar": False},
             className= "card",
         ),
 
-
+        dcc.Graph(
+            figure = charts[4],
+            # style={'display': 'inline-block'},
+            # config={"displayModeBar": False},
+            className= "card",
+        ),
         # dcc.Graph(
         #     figure = charts[1],
         #     style={'display': 'inline-block'},
