@@ -1,0 +1,3 @@
+,Date,Coil,NSNR,NSNR_std,noise_std,Manufacturer,ManufacturersModelName,InstitutionAddress,StationName,ProtocolName,CoilString,InstitutionName,InstitutionalDepartmentName,ReceiveCoilName,ReceiveCoilActiveElements
+0,2023-07-03 13:16:52.690000,Head_DQA_2dynamics_20230703131346_201_000,1515.0,125.6628759359552,48.416236877441406,Philips,Ingenia Ambition X,25 Grafton Way,PHILIPS-499QHGT,Head_DQA_2dynamics,MULTI COIL,UCLH,MRI,0,0
+1,2023-07-03 08:21:40.357500,HN_DQA_20230703081103_00,1235.0,234.56509748388314,14.653001398512968,Siemens,Avanto_fit,"Euston Road 265-257,London,District,GB,NW1 2BW",MRC25326,HN_DQA,0,UCH Podium MR2,X-Ray,HeadNeck_20,"HE1-4;NE1,2"
